@@ -8,10 +8,12 @@ export default class Operacao extends Component {
             <Picker 
             styles={styles.operacao}
             selectedValue={this.props.operacao}
-            onValueChange={op => {this.setState({operacao: op}); }}
+            onValueChange={op => { this.props.atualizaOperacao(op); }}
             >
                 <Picker.item label='Soma' value='soma' />
                 <Picker.item label='Subtração' value='subtracao' />
+                <Picker.item label='Multiplicação' value='multiplicacao' />
+                <Picker.item label='Divisão' value='divisao' />
             </Picker>
         );
     }
